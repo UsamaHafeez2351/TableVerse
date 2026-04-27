@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787338406801",
+    "project_id": "tableverse-36be6",
+    "storage_bucket": "tableverse-36be6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787338406801:android:ce78a9c24b240a5d5f0830",
+        "android_client_info": {
+          "package_name": "com.example.tableverse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlwi-jOwHOD5ybePgSTLzFgYNZ60N4ewo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
