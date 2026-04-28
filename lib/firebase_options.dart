@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -46,30 +47,30 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCkvwu5DE1iTtkZ2-58wrdsYK1EIoX4qgM',
-    appId: '1:787338406801:web:8c8b2e175254d3c25f0830',
-    messagingSenderId: '787338406801',
-    projectId: 'tableverse-36be6',
-    authDomain: 'tableverse-36be6.firebaseapp.com',
-    storageBucket: 'tableverse-36be6.firebasestorage.app',
-    measurementId: 'G-61WLESZP9S',
+  static FirebaseOptions get web => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_WEB_API_KEY'] ?? '',
+    appId: dotenv.env['FIREBASE_WEB_APP_ID'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_WEB_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_WEB_PROJECT_ID'] ?? '',
+    authDomain: dotenv.env['FIREBASE_WEB_AUTH_DOMAIN'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_WEB_STORAGE_BUCKET'] ?? '',
+    measurementId: dotenv.env['FIREBASE_WEB_MEASUREMENT_ID'] ?? '',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAlwi-jOwHOD5ybePgSTLzFgYNZ60N4ewo',
-    appId: '1:787338406801:android:ce78a9c24b240a5d5f0830',
-    messagingSenderId: '787338406801',
-    projectId: 'tableverse-36be6',
-    storageBucket: 'tableverse-36be6.firebasestorage.app',
+  static FirebaseOptions get android => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_ANDROID_API_KEY'] ?? '',
+    appId: dotenv.env['FIREBASE_ANDROID_APP_ID'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_ANDROID_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_ANDROID_PROJECT_ID'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_ANDROID_STORAGE_BUCKET'] ?? '',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDgnENIj3rUUhkTETYMWUSTZZxZW_PNgqY',
-    appId: '1:787338406801:ios:cb5b05ace15af86e5f0830',
-    messagingSenderId: '787338406801',
-    projectId: 'tableverse-36be6',
-    storageBucket: 'tableverse-36be6.firebasestorage.app',
-    iosBundleId: 'com.example.tableverse',
+  static FirebaseOptions get ios => FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_IOS_API_KEY'] ?? '',
+    appId: dotenv.env['FIREBASE_IOS_APP_ID'] ?? '',
+    messagingSenderId: dotenv.env['FIREBASE_IOS_MESSAGING_SENDER_ID'] ?? '',
+    projectId: dotenv.env['FIREBASE_IOS_PROJECT_ID'] ?? '',
+    storageBucket: dotenv.env['FIREBASE_IOS_STORAGE_BUCKET'] ?? '',
+    iosBundleId: dotenv.env['FIREBASE_IOS_BUNDLE_ID'] ?? 'com.example.tableverse',
   );
 }

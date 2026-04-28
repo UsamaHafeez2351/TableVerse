@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'core/services/firebase_service.dart';
 import 'core/theme/app_theme.dart';
 import 'core/providers/theme_provider.dart';
@@ -11,6 +12,9 @@ import 'features/restaurants/presentation/restaurants_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
   
   // Initialize Firebase
   await FirebaseService.instance.initialize();
