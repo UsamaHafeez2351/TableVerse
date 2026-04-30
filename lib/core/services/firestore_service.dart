@@ -31,6 +31,7 @@ class FirestoreService {
           })
           .toList();
     } catch (e) {
+      print('Firestore error getAllRestaurants: $e');
       throw Exception('Failed to fetch restaurants');
     }
   }
@@ -38,9 +39,9 @@ class FirestoreService {
   /// Get featured restaurants
   Future<List<Restaurant>> getFeaturedRestaurants() async {
     try {
+      // Simplified query to avoid composite index requirement
       final snapshot = await _firestore
           .collection('restaurants')
-          .where('rating', isGreaterThanOrEqualTo: 4.0)
           .orderBy('rating', descending: true)
           .limit(10)
           .get();
@@ -53,6 +54,7 @@ class FirestoreService {
           })
           .toList();
     } catch (e) {
+      print('Firestore error: $e');
       throw Exception('Failed to fetch featured restaurants');
     }
   }
