@@ -12,7 +12,7 @@ import '../../../../shared/widgets/shimmer_loader.dart';
 import 'widgets/restaurant_card.dart';
 import 'widgets/category_chip.dart';
 
-/// Premium home screen with animated header and featured restaurants carousel
+/// Premium home screen with animated header and featured restaurants carousel 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
 
