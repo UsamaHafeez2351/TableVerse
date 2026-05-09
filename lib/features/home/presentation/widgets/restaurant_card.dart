@@ -7,7 +7,7 @@ import '../../../../core/constants/app_colors.dart';
 import '../../../../shared/models/restaurant.dart';
 import '../../../../shared/widgets/glass_card.dart';
 
-/// Premium restaurant card with glassmorphism effect
+/// Premium restaurant card with glassmorphism effect 
 class RestaurantCard extends StatelessWidget {
   final Restaurant restaurant;
   final VoidCallback onTap;
