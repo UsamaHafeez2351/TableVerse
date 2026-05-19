@@ -2,7 +2,7 @@ import 'package:flutter/animation.dart';
 
 /// App-wide constants for TableVerse
 class AppConstants {
-  AppConstants._();
+  AppConstants._(); 
 
   // ==================== Animation ====================
   static const Duration defaultAnimationDuration = Duration(milliseconds: 300);
