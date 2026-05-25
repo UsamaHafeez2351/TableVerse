@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Premium iOS-inspired color palette for TableVerse
 /// Supports both light and dark modes with carefully crafted colors
 class AppColors {
-  AppColors._();
+  AppColors._(); 
 
   // ==================== Brand Colors ====================
   static const Color primary = Color(0xFF6366F1); // Indigo 500
