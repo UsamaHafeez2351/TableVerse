@@ -10,7 +10,7 @@ import '../../../../shared/widgets/search_bar.dart';
 import '../../../../shared/widgets/shimmer_loader.dart';
 import '../../home/presentation/widgets/restaurant_card.dart';
 
-/// Premium restaurants listing screen with filters and search
+/// Premium restaurants listing screen with filters and search 
 class RestaurantsScreen extends ConsumerStatefulWidget {
   const RestaurantsScreen({super.key});
 
