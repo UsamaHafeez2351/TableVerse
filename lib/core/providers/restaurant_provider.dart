@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../services/firestore_service.dart';
 import '../../shared/models/restaurant.dart';
 import '../../shared/models/menu_item.dart';
-
 /// Firestore service provider
 final firestoreServiceProvider = Provider<FirestoreService>((ref) {
   return FirestoreService.instance;
